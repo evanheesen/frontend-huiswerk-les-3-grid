@@ -1,1 +1,72 @@
 /*Maak hier jouw CSS!*/
+body {
+    background-color: antiquewhite;
+}
+
+.container {
+    color: white;
+    display: grid;
+    margin: 16px;
+    column-gap: 16px;
+    row-gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-areas:
+            "header"
+            "content"
+            "sidebar1"
+            "sidebar2"
+            "content2"
+            "."
+            "footer";
+
+}
+
+.item-A {
+    grid-area: header;
+    background-color: brown;
+    padding: 16px;
+}
+
+.item-B {
+    grid-area: content;
+    background-color: brown;
+    padding: 16px;
+}
+
+.item-C {
+    grid-area: sidebar1;
+    background-color: brown;
+    padding: 16px;
+}
+
+.item-D {
+    grid-area: sidebar2;
+    background-color: brown;
+    padding: 16px;
+}
+
+.item-E {
+    grid-area: content2;
+    background-color: brown;
+    padding: 16px;
+}
+
+.item-F {
+    grid-area: footer;
+    background-color: brown;
+    padding: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 174px 116px auto 50px;
+        grid-template-areas:
+            "header sidebar1 sidebar1"
+            "content sidebar1 sidebar1"
+            "content content2 sidebar2"
+            "content content2 ."
+            "footer footer footer";
+    }
+}
